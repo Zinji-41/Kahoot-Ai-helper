@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en"><meta charset="utf-8"><title>Kahoot AI Helper</title>
+<style>
+body{width:320px;padding:20px;margin:0;background:#171326;color:#f6f3ff;font:14px system-ui}h1{font-size:21px;margin:0 0 10px}p{color:#c9bfdc;line-height:1.5}label{display:block;margin-top:14px}select,input{box-sizing:border-box;width:100%;padding:10px;margin:6px 0;background:#292139;border:1px solid #645477;border-radius:7px;color:white}button{cursor:pointer;border:0;border-radius:7px;padding:10px;margin-top:9px;background:#b397ff;color:#1c1039;font-weight:650}button.secondary{background:#393045;color:white}#status{white-space:pre-wrap;overflow-wrap:anywhere}small{color:#c9bfdc}
+</style>
+<h1>Kahoot AI Helper <small>0.2.7</small></h1><p>Automatic, best-effort answers. Accuracy and speed vary. Supports single-answer multiple choice and true/false.</p>
+<label>Provider<select id="provider"><option value="gemini">Google Gemini</option><option value="openai">OpenAI</option></select></label>
+<label>API key (this browser session only)<input id="key" type="password" autocomplete="off" placeholder="Paste your API key"></label>
+<label>Vision-capable model<input id="model" value="gemini-3.5-flash-lite"></label>
+<button id="save">Save settings</button>
+<button class="secondary" id="fast">Use faster Gemini preset</button>
+<p>Question on another Kahoot tab? Open this popup on that tab and set it as the source first. For screenshots, keep that source tab active in its own window.</p>
+<button class="secondary" id="source">Use this tab as question source</button>
+<button class="secondary" id="clear">Read player tab instead</button>
+<div><button id="start">Start on this player tab</button> <button class="secondary" id="stop">Stop</button></div>
+<p id="status" role="status">Loading…</p>
+<small>While running, visible quiz text and screenshots of the selected Kahoot tab are sent to your selected AI provider. Free-tier quotas apply; paid accounts may incur charges. No 80% accuracy claim has been tested.</small>
+<script src="popup.js"></script></html>
